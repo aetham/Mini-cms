@@ -18,7 +18,9 @@ function country_table()
             .$row["name"]."<td>"
             .$row["continent"]."<td>"
             .$row["capital"]."<td>"
-            .$row["gdp"].'€'."<td><a href=\"update_country.php?id=$row[id]\" >Edit</a>"
+            .$row["gdp"].'€'
+            ."<td><a href=\"update_country.php?id=$row[id]\" >Edit</a>"
+            ."<a href=\"includes/process.php?delete_country=$row[id]\" > Delete </a>"
             ."</td></tr>";
     }
     $mysqli->close();
@@ -49,7 +51,9 @@ function city_table()
         echo "<tr><td>"
             .$row["name"]."<td>"
             .$row["population"]."<td>"
-            .$row["country_code"]."<td><a href=\"update_city.php?id=$row[id]\" >Edit</a>"
+            .$row["country_code"]
+            ."<td><a href=\"update_city.php?id=$row[id]\" > Edit </a>"
+            ."<a href=\"includes/process.php?delete_city=$row[id]\" > Delete </a>"
             ."</td></tr>";
     }
     $mysqli->close();
