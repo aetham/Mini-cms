@@ -16,14 +16,14 @@ logged_in();
     <a href="logout.php" title="Logout">Logout.</a>
 </div>
 <div>
-    <table class="table_one">
+        <table class="table_one">
         <caption>Country Table</caption>
         <tr>
             <th>Name</th>
             <th>Continent</th>
             <th>Capital</th>
             <th>GDP</th>
-            <th>Edit</th>
+            <th>Actions</th>
         </tr>
         <?php
         require_once("includes/functions.php");
@@ -36,7 +36,7 @@ logged_in();
             <th>Name</th>
             <th>Population</th>
             <th>Country code</th>
-            <th>Edit</th>
+            <th>Actions</th>
         </tr>
         <?php
         require_once("includes/functions.php");
