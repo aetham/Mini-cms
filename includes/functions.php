@@ -18,7 +18,7 @@ function country_table()
             .$row["name"]."<td>"
             .$row["continent"]."<td>"
             .$row["capital"]."<td>"
-            .$row["gdp"].'€'
+            .$row["gdp"].' billion euros'
             ."<td><a href=\"update_country.php?id=$row[id]\" >Edit</a>"
             ."<a href=\"includes/process.php?delete_country=$row[id]\" > Delete </a>"
             ."</td></tr>";
