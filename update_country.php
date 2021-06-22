@@ -12,7 +12,7 @@ logged_in();
 </head>
 <body>
 <?php
-$mysqli = new mysqli("localhost", "root", "kodukodu12", "cms") or die(mysqli_error($mysqli));
+$mysqli = Require('includes/connection.php');
 $id = $_GET['id'];
 $result = mysqli_query($mysqli, "SELECT * FROM country WHERE id=$id");
 

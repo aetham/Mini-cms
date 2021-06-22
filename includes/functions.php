@@ -8,7 +8,7 @@ function logged_in()
 }
 function country_table()
 {
-    $mysqli = new mysqli("localhost", "root", "kodukodu12", "cms") or die(mysqli_error($mysqli));
+    $mysqli = Require('includes/connection.php');
     $sql = "SELECT id, name, continent, capital, gdp from country";
     $result = $mysqli->query($sql);
 
@@ -27,7 +27,7 @@ function country_table()
 }
 
 function update_country_table(){
-    $mysqli = new mysqli("localhost", "root", "kodukodu12", "cms") or die(mysqli_error($mysqli));
+    $mysqli = Require('includes/connection.php');
     if (isset($_POST["update"])) {
         $id = $_POST["id"];
         $name = $_POST["name"];
@@ -42,7 +42,7 @@ function update_country_table(){
 
 function city_table()
 {
-    $mysqli = new mysqli("localhost", "root", "kodukodu12", "cms") or die(mysqli_error($mysqli));
+    $mysqli = Require('includes/connection.php');
     $sql = "SELECT id, name, population, country_code from city";
     $result = $mysqli->query($sql);
 
@@ -60,7 +60,7 @@ function city_table()
 
 }
 function update_city_table(){
-    $mysqli = new mysqli("localhost", "root", "kodukodu12", "cms") or die(mysqli_error($mysqli));
+    $mysqli = Require('includes/connection.php');
     if (isset($_POST["update"])) {
         $id = $_POST["id"];
         $name = $_POST["name"];

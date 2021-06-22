@@ -1,7 +1,8 @@
 <?php
 session_start();
-$con = new mysqli("localhost", "root", "kodukodu12", "cms") or die(mysqli_error($con));
-if ( mysqli_connect_errno() ) {
+# Change the connection parameters to your mysqli connection.
+$con = new mysqli("localhost", "root", "", "cms") or die(mysqli_error($con));
+if ( mysqli_connect_error() ) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
